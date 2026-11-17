@@ -264,15 +264,15 @@ export default function FivemQuery() {
                     <div className="mb-10 text-center" style={{ animation: 'float-up 0.6s ease-out' }}>
                         <div className="flex items-center justify-center gap-3 mb-6">
                             <div className="relative w-24 h-24 sm:w-32 sm:h-32">
-                                <img src="/logo.png" alt="Logo" className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-xl object-contain" />
+                                <img src="/mascot.png" alt="FiveM Query" className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover" />
                             </div>
                         </div>
                         <h1 className="font-display text-3xl md:text-4xl font-bold tracking-wider mb-2">
-                            <span className="text-glitch-cyan">AETHER</span>
-                            <span className="text-glitch-text mx-2">FIVEM</span>
+                            <span className="text-glitch-cyan">FIVEM</span>
+                            <span className="text-glitch-text mx-2">QUERY</span>
                         </h1>
                         <div className="text-xs font-mono text-glitch-text-dim tracking-[0.3em] uppercase">
-                            FiveM Server Query Tool
+                            Server Player Query Tool
                         </div>
                     </div>
                     <div className="w-full max-w-2xl" style={{ animation: 'float-up 0.6s ease-out 0.15s both' }}>
@@ -330,7 +330,7 @@ export default function FivemQuery() {
                         </div>
                         <div className="mt-5 flex items-center justify-center gap-3" style={{ animation: 'float-up 0.6s ease-out 0.45s both' }}>
                             <a
-                                href="https://github.com/xkintaro/aether-fivem"
+                                href="https://github.com/xkintaro/fivem-query"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2 px-4 py-2 bg-glitch-card/60 border border-glitch-border rounded-lg hover:border-glitch-text/30 hover:bg-glitch-card transition-all duration-300 group"
@@ -360,10 +360,9 @@ export default function FivemQuery() {
                     <header className="sticky top-0 z-30 bg-glitch-bg/80 backdrop-blur-md border-b border-glitch-border px-4 py-3">
                         <div className="max-w-6xl mx-auto flex items-center justify-between">
                             <div className="flex items-center gap-3">
-                                <img src="/logo.png" alt="Logo" className="w-8 h-8 rounded-lg object-contain" />
                                 <h1 className="font-display text-sm font-bold tracking-wider">
-                                    <span className="text-glitch-cyan">AETHER</span>
-                                    <span className="text-glitch-text ml-1">FIVEM</span>
+                                    <span className="text-glitch-cyan">FIVEM</span>
+                                    <span className="text-glitch-text ml-1">QUERY</span>
                                 </h1>
                             </div>
                             <button
