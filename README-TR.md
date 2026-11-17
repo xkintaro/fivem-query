@@ -1,155 +1,121 @@
 <a href="README.md">
- <img src="https://img.shields.io/badge/Language-English-blue?style=flat-square&logo=google-translate&logoColor=white" alt="English">
+  <img src="https://img.shields.io/badge/Language-English-blue?style=flat-square&logo=google-translate&logoColor=white" alt="English">
 </a>
 <a href="README-TR.md">
- <img src="https://img.shields.io/badge/Dil-Türkçe-red?style=flat-square&logo=google-translate&logoColor=white" alt="Türkçe">
+  <img src="https://img.shields.io/badge/Language-Türkçe-red?style=flat-square&logo=google-translate&logoColor=white" alt="Türkçe">
 </a>
 
   <br />
   <br />
 
 <div align="center">
-  <img src="frontend/public/logo.png" width="120" height="120" />
-
+  <img src="frontend/public/mascot.png" width="120" height="120" />
   <br />
   <br />
 
   <p>
-    FiveM Sunucularında Oyuncu Sorgulama & Analiz Aracı
+     FiveM sunucularındaki oyuncuları sorgulayıp filtrelemenizi sağlayan bir web aracı.
   </p>
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
   <p>
+    <a href="#warning">Uyarı</a> •
+    <a href="#about">Hakkında</a> •
     <a href="#features">Özellikler</a> •
-    <a href="#technologies">Teknolojiler</a> •
-    <a href="#installation">Kurulum</a> •
-    <a href="#license">Lisans</a> •
-    <a href="#gallery">Galeri</a>
+    <a href="#tech">Teknolojiler</a> •
+    <a href="#setup">Kurulum</a> •
+    <a href="#gallery">Galeri</a> •
+    <a href="#license">Lisans</a>
   </p>
 
   <br />
   <br />
 </div>
 
-## 📋 Hakkında
+## <a id="warning"></a> ⚠️ Uyarı
 
-**Aether Fivem**, herhangi bir FiveM oyun sunucusunu sorgulamanıza ve bağlı tüm oyuncuları detaylı bilgileriyle birlikte anında görüntülemenize olanak tanıyan bir web uygulamasıdır.
+Bu proje daha önce **Aether FiveM** adıyla yayınlanıyordu. Ne işe yaradığını daha iyi anlatması için adı **FiveM Query** olarak değiştirildi. Bu değişiklikle birlikte Aether logosu kaldırıldı, yeni logo giriş ekranında ve favicon olarak kullanılmaya başlandı, gezinme çubuğundaki logo da kaldırıldı. Galerideki ekran görüntüleri hâlâ eski adı ve logoyu gösteriyor.
 
-<img src="frontend/public/md/20260227203204299.jpg" width="100%"  />
+## <a id="about"></a> 📋 Hakkında
 
-## ✨ Özellikler <a id="features"></a>
+**FiveM Query**, bir FiveM sunucusuna bağlı tüm oyuncuları listeleyen bir web aracıdır. Sunucunun `players.json` adresini girin, araç kendi backend'i üzerinden anlık oyuncu listesini çeksin. Her oyuncu adı, sunucu ID'si ve ping değeriyle gösterilir.
 
-### Sunucu Sorgulama
+Bir oyuncuya tıklayarak Steam, Discord, Rockstar lisansı, Xbox Live ve FiveM gibi tüm kimliklerini görebilirsiniz. Kalabalık sunucularda aradığınız oyuncuyu hızlıca bulmak için listeyi ada, ID'ye, Steam'e veya Discord'a göre filtreleyin.
 
-- Canlı oyuncu verilerini çekmek için herhangi bir FiveM sunucusunun `players.json` uç nokta URL'sini girin.
-- Yükleme simgesi, hata yönetimi ve başarı durumu ile anlık geri bildirim.
-- Sonuçları temizlemek ve istediğiniz zaman yeni bir başlangıç yapmak için **Yeni Sorgu** butonu.
+## <a id="features"></a> ✨ Özellikler
 
-### Oyuncu Listesi & Detayları
+- **Sunucu sorgulama**: Sunucunun `players.json` adresini girerek anlık oyuncu listesini çekin.
+- **Oyuncu listesi**: Her oyuncunun adını, sunucu ID'sini ve ping değerini görün. Ping, gecikmeye göre yeşil, sarı veya kırmızı renkte gösterilir.
+- **Oyuncu detayları**: Bir oyuncuya tıklayarak bağlantı adresini, ping değerini ve türüne göre renklendirilmiş tüm kimliklerini görün.
+- **Birlikte çalışan filtreler**: Oyuncu adı, ID, Steam ID ve Discord ID ile aynı anda arama yapın, tüm filtreleri tek tıkla temizleyin.
+- **İstatistikler**: Toplam oyuncu sayısını, filtrelere uyan oyuncu sayısını ve ortalama ping değerini tek bakışta görün.
+- **Yeni sorgu**: Sayfayı yenilemeden sonuçları temizleyin ve başka bir sunucuyu sorgulayın.
 
-- Tüm çevrimiçi oyuncular duyarlı, animasyonlu bir kart ızgarasında görüntülenir.
-- Her kart, renk kodlu gecikme göstergesi ile birlikte **oyuncu adını**, **sunucu ID'sini** ve **ping** değerini gösterir.
-- **detaylı bir modal** açmak için herhangi bir oyuncuya tıklayın:
+## <a id="tech"></a> 🛠️ Teknolojiler
 
-### Gelişmiş Filtreleme
+`React` · `Vite` · `Tailwind CSS` · `Node.js` · `Express`
 
-Belirli oyuncuları hızlıca bulmak için gerçek zamanlı, çok kriterli arama:
-
-- **Oyuncu Adı**: Oyun içi isme göre filtrele.
-- **Oyuncu ID'si**: Sunucu tarafından atanan ID'ye göre filtrele.
-- **Steam ID**: Steam hex tanımlayıcısına göre filtrele.
-- **Discord ID**: Discord tanımlayıcısına göre filtrele.
-- Kesin sonuçlar için tüm filtreler eş zamanlı çalışır.
-- Tüm filtreleri anında sıfırlamak için **Hepsini Temizle** butonu.
-
-### Canlı İstatistikler
-
-Bir bakışta aşağıdakileri gösteren pano istatistik kartları:
-
-- **Toplam Oyuncu**: Bağlı oyuncu sayısı.
-- **Filtrelenen**: Mevcut filtre kriterlerine kaç oyuncunun uyduğu.
-- **Ortalama Ping**: Tüm bağlı oyuncuların ortalama gecikmesi.
-- **Sunucu**: Çevrimiçi durum göstergesi.
-
-## 🛠️ Teknolojiler <a id="technologies"></a>
-
-- **Frontend:** `React 19`, `Vite`, `Tailwind CSS`, `Axios`
-- **Backend:** `Node.js`, `Express.js`, `CORS`
-
-## 🚀 Kurulum <a id="installation"></a>
-
-Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin.
+## <a id="setup"></a> 🚀 Kurulum
 
 ### Gereksinimler
 
-- **Node.js** (v18+)
-- **npm**
+- **Node.js**
 
 ### Adım Adım Kurulum
 
-1.  **Depoyu Klonlayın**
+1. **Depoyu klonlayın**
 
-    ```bash
-    git clone https://github.com/xkintaro/aether-fivem.git
-    cd aether-fivem
-    ```
+   ```bash
+   git clone https://github.com/xkintaro/fivem-query.git
+   cd fivem-query
+   ```
 
-2.  **Backend Bağımlılıklarını Yükleyin**
+2. **Bağımlılıkları yükleyin**
 
-    ```bash
-    cd backend
-    npm install
-    ```
+   ```bash
+   cd backend
+   npm install
+   cd ../frontend
+   npm install
+   ```
 
-3.  **Frontend Bağımlılıklarını Yükleyin**
+3. **Backend sunucusunu başlatın**
 
-    ```bash
-    cd ../frontend
-    npm install
-    ```
+   ```bash
+   cd backend
+   node index.js
+   ```
 
-4.  **Backend Sunucusunu Başlatın**
+   Backend `http://localhost:5000` adresinde çalışır.
 
-    ```bash
-    cd ../backend
-    node index.js
-    ```
+4. **Geliştirme sunucusunu başlatın**
 
-    Backend `http://localhost:5000` adresinde çalışacaktır.
+   Yeni bir terminalde:
 
-5.  **Frontend Sunucusunu Başlatın**
-    Yeni bir terminal açın:
-    ```bash
-    cd frontend
-    npm run dev
-    ```
-    Frontend `http://localhost:5173` adresinde çalışacaktır.
+   ```bash
+   cd frontend
+   npm run dev
+   ```
 
-### Kullanım
+Uygulamayı şu adreste açın: [http://localhost:5173](http://localhost:5173). Ardından bir FiveM sunucusunun adresini `http://ip:port/players.json` biçiminde girin.
 
-1. Tarayıcınızda `http://localhost:5173` adresini açın.
-2. Bir FiveM sunucusunun oyuncu uç nokta URL'sini girin (örn. `http://ip:port/players.json`).
-3. Tüm bağlı oyuncuları çekmek ve görüntülemek için **Sorgula**'ya tıklayın.
-4. İsim, ID, Steam veya Discord ile arama yapmak için filtre girişlerini kullanın.
-5. Detaylı bilgilerini görüntülemek için herhangi bir oyuncu kartına tıklayın.
+## <a id="gallery"></a> 🖼️ Galeri
 
-## 📄 Lisans <a id="license"></a>
+<img src="frontend/public/md/20260227203204299.jpg" width="100%" />
 
-Bu proje MIT Lisansı altında lisanslanmıştır. Ayrıntılar için [LICENSE](LICENSE) dosyasını inceleyebilirsiniz.
+<img src="frontend/public/md/20260227203204081.jpg" width="100%" />
 
-## 🖼️ Galeri <a id="gallery"></a>
+<img src="frontend/public/md/20260227203204191.jpg" width="100%" />
 
-<img src="frontend/public/md/20260227203204081.jpg" width="100%"  />
+## <a id="license"></a> 📄 Lisans
 
-#
-
-<img src="frontend/public/md/20260227203204191.jpg" width="100%"  />
+Bu proje MIT Lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakabilirsiniz.
 
 #
 
